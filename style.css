@@ -263,11 +263,32 @@ a:hover { color: var(--ink); }
   gap: 28px;
 }
 
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work h3,
+.work p {
+  align-self: stretch;
+}
+
 .work-cover {
   display: block;
-  margin-bottom: 14px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 14px;
+  padding: 4px;
   background: var(--bg-raise);
   border: 1px solid var(--line);
+}
+
+.work-cover img {
+  display: block;
+  width: 240px;
+  max-width: 100%;
+  height: auto;
 }
 
 .work h3 {
