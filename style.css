@@ -132,6 +132,8 @@ a:hover { color: var(--ink); }
 .btn-solid {
   background: var(--accent);
   color: #e3d4ac;
+  outline: 2px solid var(--ink); 
+  outline-offset: 2px;
 }
 
 .btn-solid:hover { filter: brightness(1.25); color: #e3d4ac; }
@@ -139,6 +141,8 @@ a:hover { color: var(--ink); }
 .btn-ghost {
   border: 2px solid var(--line);
   color: var(--ink);
+  outline: 2px solid var(--ink); 
+  outline-offset: 2px;
 }
 
 .btn-ghost:hover {
