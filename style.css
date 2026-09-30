@@ -200,7 +200,7 @@ a:hover { color: var(--ink); }
   gap: clamp(24px, 4vw, 56px);
   align-items: start;
   padding: 28px;
-  background: #3a2428;
+  background: #8f3a36;
   border: 1px solid #5a3a40;
 }
 
