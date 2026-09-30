@@ -3,7 +3,7 @@
   --bg-raise: #1a2a22;
   --ink: #e3d4ac;
   --mute: #e3d4ac;
-  --accent: #592424;
+  --accent: #8f3a36;
   --accent-soft: #e3d4ac;
 
   --serif: "Cormorant Garamond", "Palatino Linotype", Palatino, Georgia, serif;
@@ -204,7 +204,7 @@ a:hover { color: var(--ink); }
   gap: clamp(24px, 4vw, 56px);
   align-items: start;
   padding: 28px;
-  background: #8f3a36;
+  background: #592424;
   border: 1px solid #5a3a40;
 }
 
