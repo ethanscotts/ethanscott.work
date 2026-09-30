@@ -122,3 +122,31 @@ if (gallery && lightbox && lbImage) {
     if (e.target === dlg && pressedOutside) dlg.close();
   });
 })();
+// World map popup
+(function () {
+  const dlg = document.getElementById("worldmap");
+  const openBtn = document.getElementById("map-open");
+  if (!dlg || !openBtn) return;
+
+  const img = document.getElementById("map-img");
+  const frame = dlg.querySelector(".map-frame");
+
+  openBtn.addEventListener("click", () => {
+    dlg.classList.remove("zoomed");
+    dlg.showModal();
+    frame.scrollTop = 0;
+    frame.scrollLeft = 0;
+  });
+
+  dlg.querySelector(".map-close").addEventListener("click", () => dlg.close());
+
+  // Click the map to toggle between fit-to-screen and full size
+  img.addEventListener("click", () => dlg.classList.toggle("zoomed"));
+
+  // Click outside the map to close
+  let pressedOutside = false;
+  dlg.addEventListener("mousedown", (e) => { pressedOutside = e.target === dlg; });
+  dlg.addEventListener("click", (e) => {
+    if (e.target === dlg && pressedOutside) dlg.close();
+  });
+})();
