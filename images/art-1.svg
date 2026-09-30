@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <rect width="1000" height="700" fill="#1a1612"/>
+  <path d="M0 520 C180 480, 280 560, 420 500 S700 430, 1000 510 L1000 700 L0 700 Z" fill="#2b241c"/>
+  <circle cx="780" cy="160" r="48" fill="#c45a32" opacity="0.55"/>
+  <text x="40" y="50" fill="#9a9080" font-family="Georgia, serif" font-size="18">study · landscape</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 720" width="480" height="720">
+  <rect width="480" height="720" fill="#17201c"/>
+  <rect x="22" y="22" width="436" height="676" fill="none" stroke="#7a8f6a" stroke-width="1.5"/>
+  <path d="M80 420 C160 280, 320 280, 400 420" fill="none" stroke="#3d4a38" stroke-width="8"/>
+  <text x="240" y="520" text-anchor="middle" fill="#e6eadc" font-family="Georgia, serif" font-size="32">Novella Title</text>
+  <text x="240" y="560" text-anchor="middle" fill="#8a9380" font-family="Georgia, serif" font-size="16">placeholder cover</text>
+</svg>

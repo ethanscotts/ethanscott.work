@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 720" width="480" height="720">
+  <rect width="480" height="720" fill="#21181c"/>
+  <line x1="40" y1="80" x2="440" y2="80" stroke="#6a4a52" stroke-width="1"/>
+  <line x1="40" y1="640" x2="440" y2="640" stroke="#6a4a52" stroke-width="1"/>
+  <text x="240" y="360" text-anchor="middle" fill="#edd8d4" font-family="Georgia, serif" font-size="30">Short Story</text>
+  <text x="240" y="400" text-anchor="middle" fill="#9a8080" font-family="Georgia, serif" font-size="16">placeholder cover</text>
+</svg>

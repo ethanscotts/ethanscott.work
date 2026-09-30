@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900">
+  <rect width="900" height="900" fill="#161310"/>
+  <circle cx="450" cy="450" r="220" fill="none" stroke="#3a3228" stroke-width="2"/>
+  <circle cx="450" cy="450" r="90" fill="none" stroke="#c45a32" stroke-width="1.5"/>
+  <text x="450" y="830" text-anchor="middle" fill="#9a9080" font-family="Georgia, serif" font-size="18">study · mark</text>
+</svg>
