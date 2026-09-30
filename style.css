@@ -706,3 +706,26 @@ body:has(#sample[open]) { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   #sample[open] .sample-panel { animation: none; }
 }
+/* Smoother scrolling in the sample popup */
+.sample-panel {
+  will-change: transform;
+}
+
+.sample-body {
+  overscroll-behavior: contain;
+  will-change: scroll-position;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* While the popup is open, the page behind it is hidden by the blurred
+   backdrop anyway, so switch off the other blurs to free up the GPU. */
+body:has(#sample[open]) .site-header,
+body:has(#sample[open]) .site-footer,
+body:has(#sample[open]) .hero,
+body:has(#sample[open]) .about,
+body:has(#sample[open]) .section-head,
+body:has(#sample[open]) .work,
+body:has(#sample[open]) .icon-list {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
