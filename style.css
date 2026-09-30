@@ -533,3 +533,46 @@ a:hover { color: var(--ink); }
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
+/* Latest chapters (inside the red featured card) */
+.latest {
+  margin: 20px 0 22px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(230, 190, 80, 0.45); /* gold pinstripe */
+}
+
+.latest h3 {
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.chapter-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chapter-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(227, 212, 172, 0.15);
+}
+
+.chapter-list li:last-child { border-bottom: 0; }
+
+.chapter-list a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.chapter-list a:hover { text-decoration: underline; }
+
+.chapter-list time {
+  flex-shrink: 0;
+  color: var(--mute);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
