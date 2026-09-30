@@ -54,13 +54,24 @@ if (gallery && lightbox && lbImage) {
 (function () {
   const list = document.getElementById("latest-chapters");
   if (!list) return;
-    const BOOK = "Journey Through The Endless Castle",
-                 "[Progression | Slow Burn | Tower Climber]";
-  const clean = (t) =>
-    t
-      .replace(new RegExp("^\\s*" + BOOK + "\\s*[-–—:|]\\s*", "i"), "") // "Book - Chapter"
-      .replace(new RegExp("\\s*[-–—:|]\\s*" + BOOK + "\\s*$", "i"), "") // "Chapter - Book"
-      .trim() || t;
+  // Anything listed here is removed from chapter titles, wherever it appears.
+  // One item per line, in quotes, with a comma after each.
+  const REMOVE = [
+    "Journey Through The Endless Castle",
+    "[Progression | Slow Burn | Tower Climber]",
+  ];
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const clean = (t) => {
+    let out = t;
+    REMOVE.forEach((r) => {
+      out = out.replace(new RegExp(esc(r), "gi"), "");
+    });
+    out = out
+      .replace(/\s{2,}/g, " ")
+      .replace(/^[\s\-–—:|]+|[\s\-–—:|]+$/g, "")
+      .trim();
+    return out || t;
+  };
 
   fetch("data/chapters.json", { cache: "no-cache" })
     .then((r) => (r.ok ? r.json() : Promise.reject()))
