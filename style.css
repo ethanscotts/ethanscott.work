@@ -22,27 +22,48 @@ html {
 
 body {
   margin: 0;
-  background-color: #121c17;
+  background-color: #1f3a2b;
   background-image:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 72px,
-      #0e1612 72px 80px,
-      transparent 80px 128px,
-      #2a1615 128px 148px,
-      transparent 148px 168px,
-      #1a1c1b 168px 172px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent 0 72px,
-      #0e1612 72px 80px,
-      transparent 80px 128px,
-      #2a1615 128px 131px,
-      transparent 131px 168px,
-      #1a1c1b 168px 172px
-    );
-  background-size: 172px 172px;
+    /* side vignette */
+    linear-gradient(90deg,
+      rgba(0,0,0,0.8) 0%,
+      rgba(0,0,0,0.35) 12%,
+      transparent 30%,
+      transparent 70%,
+      rgba(0,0,0,0.35) 88%,
+      rgba(0,0,0,0.8) 100%),
+    /* twill weave texture */
+    repeating-linear-gradient(45deg,
+      rgba(255,255,255,0.045) 0 2px,
+      rgba(0,0,0,0.06) 2px 4px),
+    /* vertical threads */
+    repeating-linear-gradient(90deg,
+      transparent 0 40px,
+      rgba(8,12,20,0.6) 40px 64px,      /* wide black band */
+      transparent 64px 72px,
+      rgba(170,30,30,0.7) 72px 75px,    /* thin red */
+      transparent 75px 95px,
+      rgba(230,190,80,0.6) 95px 97px,   /* gold pinstripe */
+      transparent 97px 117px,
+      rgba(170,30,30,0.7) 117px 120px,
+      transparent 120px 128px,
+      rgba(8,12,20,0.6) 128px 152px,
+      transparent 152px 192px),
+    /* horizontal threads */
+    repeating-linear-gradient(0deg,
+      transparent 0 40px,
+      rgba(8,12,20,0.6) 40px 64px,
+      transparent 64px 72px,
+      rgba(170,30,30,0.7) 72px 75px,
+      transparent 75px 95px,
+      rgba(230,190,80,0.6) 95px 97px,
+      transparent 97px 117px,
+      rgba(170,30,30,0.7) 117px 120px,
+      transparent 120px 128px,
+      rgba(8,12,20,0.6) 128px 152px,
+      transparent 152px 192px);
+  background-size: 100% 100%, auto, 192px 192px, 192px 192px;
+  background-attachment: fixed, scroll, scroll, scroll;
   color: var(--ink);
   font-family: var(--sans);
   font-size: 1.05rem;
