@@ -5,6 +5,7 @@
   --mute: #e3d4ac;
   --accent: #8f3a36;
   --accent-soft: #e3d4ac;
+  --line: rgba(227, 212, 172, 0.22);
 
   --serif: "Cormorant Garamond", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -470,4 +471,65 @@ a:hover { color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .piece img { transition: none; }
+}
+/* Text panels: dark blur behind floating text */
+
+.hero,
+.about,
+.section-head,
+.work,
+.icon-list {
+  background: rgba(0, 0, 0, 0.42);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+}
+
+/* Hero: move side spacing from padding to margin so the panel floats */
+.hero {
+  margin: clamp(24px, 6vh, 72px) var(--pad) 32px;
+  padding: clamp(28px, 5vh, 56px) clamp(20px, 3vw, 40px);
+}
+
+/* About: same idea */
+.about {
+  margin: 0 var(--pad) 80px;
+  padding: 32px clamp(20px, 3vw, 40px);
+  max-width: 44rem;
+}
+
+/* Section headings hug their text */
+.section-head {
+  width: fit-content;
+  max-width: var(--measure);
+  padding: 16px 22px;
+}
+
+/* Work cards */
+.work {
+  padding: 18px;
+}
+
+/* Social icon strip */
+.icon-list {
+  width: fit-content;
+  padding: 6px 10px;
+}
+
+/* "Now serializing" label sits directly on the tartan */
+.featured > .eyebrow {
+  text-shadow: 0 0 8px #000, 0 0 18px rgba(0, 0, 0, 0.8);
+}
+
+/* Header and footer: darker, blurrier bars */
+.site-header {
+  background: rgba(0, 0, 0, 0.55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.site-footer {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
