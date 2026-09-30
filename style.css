@@ -850,3 +850,14 @@ a, button, summary, [role="button"],
   display: block;
   padding: 16px;
 }
+.feed-box { padding: 24px 28px; }
+
+.feed-box h2 {
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.feed-box p { margin: 0 0 14px; color: var(--mute); }
+.feed-box p:last-child { margin-bottom: 0; }
