@@ -813,3 +813,21 @@ body:has(#worldmap[open]) { overflow: hidden; }
   pointer-events: none;
   z-index: 9999;
 }
+/* Custom lightning bolt cursor */
+:root {
+  --cursor:
+    url("images/cursor-bolt.svg") 6 2,
+    url("images/cursor-bolt.png") 6 2,
+    auto;
+  --cursor-pointer:
+    url("images/cursor-bolt-hot.svg") 6 2,
+    url("images/cursor-bolt-hot.png") 6 2,
+    pointer;
+}
+
+html { cursor: var(--cursor); }
+
+a, button, summary, [role="button"],
+.btn, .piece, .lb-btn, .sample-close, .map-close {
+  cursor: var(--cursor-pointer);
+}
