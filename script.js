@@ -50,3 +50,36 @@ if (gallery && lightbox && lbImage) {
     if (event.key === "ArrowRight") show(current + 1);
   });
 }
+// Latest chapters (from data/chapters.json, refreshed by GitHub Action)
+(function () {
+  const list = document.getElementById("latest-chapters");
+  if (!list) return;
+
+  fetch("data/chapters.json", { cache: "no-cache" })
+    .then((r) => (r.ok ? r.json() : Promise.reject()))
+    .then(({ chapters }) => {
+      if (!chapters || !chapters.length) return;
+      list.textContent = "";
+      chapters.forEach((c) => {
+        if (!c.url.startsWith("https://www.royalroad.com/")) return;
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = c.url;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = c.title;
+        li.appendChild(a);
+        if (c.date) {
+          const time = document.createElement("time");
+          time.dateTime = c.date;
+          time.textContent = new Date(c.date).toLocaleDateString(undefined, {
+            month: "short",
+            day: "numeric",
+          });
+          li.appendChild(time);
+        }
+        list.appendChild(li);
+      });
+    })
+    .catch(() => {}); // keep the fallback link
+})();
