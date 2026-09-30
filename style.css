@@ -131,10 +131,10 @@ a:hover { color: var(--ink); }
 
 .btn-solid {
   background: var(--accent);
-  color: #f3ebe4;
+  color: #8f3a36;
 }
 
-.btn-solid:hover { filter: brightness(1.08); color: #f3ebe4; }
+.btn-solid:hover { filter: brightness(1.08); color: #8f3a36; }
 
 .btn-ghost {
   border: 1px solid var(--line);
