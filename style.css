@@ -26,24 +26,23 @@ body {
   background-image:
     repeating-linear-gradient(
       90deg,
-      #121c17 0 72px,
+      transparent 0 72px,
       #0e1612 72px 80px,
-      #121c17 80px 128px,
+      transparent 80px 128px,
       #2a1615 128px 131px,
-      #121c17 131px 168px,
+      transparent 131px 168px,
       #1a1c1b 168px 172px
     ),
     repeating-linear-gradient(
       0deg,
-      #121c17 0 72px,
+      transparent 0 72px,
       #0e1612 72px 80px,
-      #121c17 80px 128px,
+      transparent 80px 128px,
       #2a1615 128px 131px,
-      #121c17 131px 168px,
+      transparent 131px 168px,
       #1a1c1b 168px 172px
     );
   background-size: 172px 172px;
-  background-blend-mode: multiply;
   color: var(--ink);
   font-family: var(--sans);
   font-size: 1.05rem;
