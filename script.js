@@ -90,3 +90,24 @@ if (gallery && lightbox && lbImage) {
     })
     .catch(() => {}); // keep the fallback link
 })();
+// Chapter 1 sample popup
+(function () {
+  const dlg = document.getElementById("sample");
+  const openBtn = document.getElementById("sample-open");
+  if (!dlg || !openBtn) return;
+
+  openBtn.addEventListener("click", () => {
+    dlg.showModal();
+    dlg.querySelector(".sample-body").scrollTop = 0;
+  });
+
+  dlg.querySelector(".sample-close").addEventListener("click", () => dlg.close());
+
+  // Click outside the panel to close. Tracking where the press started
+  // stops a text-selection drag that ends outside from closing it.
+  let pressedOutside = false;
+  dlg.addEventListener("mousedown", (e) => { pressedOutside = e.target === dlg; });
+  dlg.addEventListener("click", (e) => {
+    if (e.target === dlg && pressedOutside) dlg.close();
+  });
+})();
