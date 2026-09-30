@@ -1,11 +1,10 @@
 :root {
-  --bg: #14110e;
-  --bg-raise: #1c1814;
-  --ink: #ece4d4;
-  --mute: #9a9080;
-  --line: #2c261f;
-  --accent: #c45a32;
-  --accent-soft: #e8c4a4;
+  --bg: #121c17;
+  --bg-raise: #1a2a22;
+  --ink: #e8e4d4;
+  --mute: #a3aa9c;
+  --accent: #7a4548;
+  --accent-soft: #d7cbb3;
 
   --serif: "Cormorant Garamond", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -132,10 +131,10 @@ a:hover { color: var(--ink); }
 
 .btn-solid {
   background: var(--accent);
-  color: #1a100c;
+  color: #f3ebe4;
 }
 
-.btn-solid:hover { filter: brightness(1.08); color: #1a100c; }
+.btn-solid:hover { filter: brightness(1.08); color: #f3ebe4; }
 
 .btn-ghost {
   border: 1px solid var(--line);
@@ -201,8 +200,8 @@ a:hover { color: var(--ink); }
   gap: clamp(24px, 4vw, 56px);
   align-items: start;
   padding: 28px;
-  background: var(--bg-raise);
-  border: 1px solid var(--line);
+  background: #3a2428;
+  border: 1px solid #5a3a40;
 }
 
 .featured-cover {
