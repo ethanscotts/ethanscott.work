@@ -54,7 +54,8 @@ if (gallery && lightbox && lbImage) {
 (function () {
   const list = document.getElementById("latest-chapters");
   if (!list) return;
-    const BOOK = "Journey Through The Endless Castle [Progression | Slow Burn | Tower Climber]";
+    const BOOK = "Journey Through The Endless Castle",
+                 "[Progression | Slow Burn | Tower Climber]";
   const clean = (t) =>
     t
       .replace(new RegExp("^\\s*" + BOOK + "\\s*[-–—:|]\\s*", "i"), "") // "Book - Chapter"
