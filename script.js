@@ -54,6 +54,12 @@ if (gallery && lightbox && lbImage) {
 (function () {
   const list = document.getElementById("latest-chapters");
   if (!list) return;
+    const BOOK = "Journey Through The Endless Castle [Progression | Slow Burn | Tower Climber]";
+  const clean = (t) =>
+    t
+      .replace(new RegExp("^\\s*" + BOOK + "\\s*[-–—:|]\\s*", "i"), "") // "Book - Chapter"
+      .replace(new RegExp("\\s*[-–—:|]\\s*" + BOOK + "\\s*$", "i"), "") // "Chapter - Book"
+      .trim() || t;
 
   fetch("data/chapters.json", { cache: "no-cache" })
     .then((r) => (r.ok ? r.json() : Promise.reject()))
@@ -67,7 +73,7 @@ if (gallery && lightbox && lbImage) {
         a.href = c.url;
         a.target = "_blank";
         a.rel = "noopener";
-        a.textContent = c.title;
+        a.textContent = clean(c.title);
         li.appendChild(a);
         if (c.date) {
           const time = document.createElement("time");
