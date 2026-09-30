@@ -729,3 +729,73 @@ body:has(#sample[open]) .icon-list {
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
+/* World map popup */
+#worldmap {
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 3vh 3vw;
+  border: 0;
+  background: transparent;
+}
+
+#worldmap[open] {
+  display: grid;
+  place-items: center;
+}
+
+#worldmap::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+body:has(#worldmap[open]) { overflow: hidden; }
+
+.map-frame {
+  max-width: 94vw;
+  max-height: 90vh;
+  overflow: auto;
+  border: 1px solid rgba(226, 193, 122, 0.45);
+  border-radius: 10px;
+  background: #0e1c3e;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+  scrollbar-color: rgba(226, 193, 122, 0.5) transparent;
+}
+
+#map-img {
+  display: block;
+  max-width: 94vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+
+/* Click the map to view it at full size and scroll around */
+#worldmap.zoomed #map-img {
+  max-width: none;
+  max-height: none;
+  cursor: zoom-out;
+}
+
+.map-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(226, 193, 122, 0.45);
+  border-radius: 50%;
+  background: rgba(14, 28, 62, 0.85);
+  color: #e2c17a;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.map-close:hover { color: #fff3d0; }
