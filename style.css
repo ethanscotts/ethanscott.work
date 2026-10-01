@@ -64,7 +64,7 @@ body {
       rgba(8,12,20,0.6) 128px 152px,
       transparent 152px 192px);
   background-size: 100% 100%, auto, 192px 192px, 192px 192px;
-  background-attachment: fixed, scroll, scroll, scroll;
+  background-attachment: scroll, scroll, scroll, scroll;
   color: var(--ink);
   font-family: var(--sans);
   font-size: 1.05rem;
