@@ -23,7 +23,8 @@ nav a small,h2 small,h3 small{color:var(--mute);font-weight:400}main{padding:8px
 .ji{position:absolute;width:32px;height:32px}.ji i{position:absolute;inset:0;background-size:contain;background-repeat:no-repeat;image-rendering:pixelated;image-rendering:crisp-edges}.ji.opt{opacity:.45}
 .jb{position:absolute;display:flex;align-items:center;justify-content:center;color:#fff;font:15px/1 monospace;text-shadow:2px 2px 0 #3f3f3f}.jb.on{color:#a0a0a0;text-shadow:none}
 .fl{margin-top:5px;font-size:12px;color:#b9d79a}.fl.no{color:#e0a08a}#omitted li{margin:6px 0}footer{color:var(--mute);padding:0 18px 30px;font-size:12px}
-</style></head><body><header><h1>Woodland 4.9.4 Recipe Book <small>253 recipes &middot; Minecraft 26.3 &middot; generated from the mod's recipe files and station code</small></h1>
+header .back{display:inline-block;margin-bottom:4px;color:var(--mute);text-decoration:none;font-size:13px}header .back:hover{color:var(--acc)}
+</style></head><body><header><a class="back" href="/">&larr; Back to ethanscott.work</a><br><h1>Woodland 4.9.4 Recipe Book <small>253 recipes &middot; Minecraft 26.3 &middot; generated from the mod's recipe files and station code</small></h1>
 <input id="q" type="search" placeholder="Search an item, ingredient or station (e.g. brass, musket, cider, ring)…" autofocus><span id="cnt"></span>
 <nav><a href="#crafting">Crafting <small>153</small></a><a href="#special">Special crafting <small>4</small></a><a href="#cooking">Furnace, Blast Furnace, Smoker &amp; Campfire <small>15</small></a><a href="#smithing">Smithing Table <small>6</small></a><a href="#brewing">Brewing Stand <small>5</small></a><a href="#gun">Gunsmithing Table <small>18</small></a><a href="#jeweler">Jeweler&#x27;s Table <small>5</small></a><a href="#kiln">Alloy Kiln &amp; Black Kiln <small>4</small></a><a href="#boiler">Boiler <small>20</small></a><a href="#fletch">Fletching Table <small>14</small></a><a href="#other">Other stations <small>3</small></a><a href="#vanilla">Vanilla recipes changed by Woodland <small>6</small></a><a href="#omitted">Left out</a></nav></header><main>
 <section id="crafting" class="sec"><h2>Crafting <small>153</small></h2>
@@ -383,7 +384,7 @@ for(const c of cards){const ok=t.every(w=>c.dataset.s.includes(w));c.classList.t
 for(const s of secs){if(s.id==='omitted')continue;s.classList.toggle('hide',!s.querySelector('.card:not(.hide)'));
  for(const h of s.querySelectorAll('h3')){const g=h.nextElementSibling;h.classList.toggle('hide',!g.querySelector('.card:not(.hide)'));}}
 cnt.textContent=t.length?n+' match'+(n==1?'':'es'):cards.length+' recipes';}
-if(location.hash.startsWith('#q='))q.value=decodeURIComponent(location.hash.slice(3));
+if(location.hash.startsWith('#q=')){try{q.value=decodeURIComponent(location.hash.slice(3));}catch(e){}}
 q.addEventListener('input',run);run();
 let tick=0;setInterval(()=>{tick++;for(const s of document.querySelectorAll('.s[data-a],.ji[data-a]')){const a=s.dataset.a.split(' ');if(a.length<2)continue;
  const id=a[tick%a.length];if(IDX[id]!==undefined)s.firstChild.style.backgroundImage='var(--i'+IDX[id]+')';}},1200);
